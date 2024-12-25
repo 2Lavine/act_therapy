@@ -49,12 +49,10 @@ export default function RatingApp() {
       return acc;
     }, {} as Ratings)
   );
-  const [date, setDate] = useState<string>(
-    new Date().toISOString().split("T")[0]
-  );
+  const [date] = useState<string>(new Date().toISOString().split("T")[0]);
   const [history, setHistory] = useState<HistoryEntry[]>([]);
   const [showHistory, setShowHistory] = useState<boolean>(false);
-  const [totalScore, setTotalScore] = useState<number>(0);
+  const [, setTotalScore] = useState<number>(0);
 
   const handleRatingChange = (
     option: string,
